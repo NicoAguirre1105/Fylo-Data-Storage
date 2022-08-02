@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --pale_blue: hsl(243, 100%, 93%);
+    --grayish_blue: hsl(229, 7%, 55%);
+    --dark_blue: hsl(228, 56%, 26%);
+    --very_dark_blue: hsl(229, 57%, 11%);
+    --start_g: hsl(6, 100%, 80%);
+    --end_g: hsl(335, 100%, 65%);
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--very_dark_blue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+body picture {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+main article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 350px;
+    margin: 7px auto;
+    z-index: 10;
+    background-color: var(--dark_blue);
+    border-radius: 10px;
+    padding: 0 35px;
+}
+
+/* First Window */
+/* First Window */
+
+.logo-window {
+    border-top-right-radius: 100px;
+}
+
+article img {
+    width: 120px;
+    margin: 35px 0 30px 0;
+}
+
+.button-container {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    margin: 0 7px 30px 5px;
+    background-color: var(--very_dark_blue);
+}
+
+.button-container img {
+    width: auto;
+    margin: auto;
+}
+
+/* Second Window  */
+/* Second Window  */
+
+.main-window {
+    position: relative;
+    padding: 30px;
+}
+
+.main-window p {
+    margin: 0 auto 20px auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--pale_blue);
+}
+
+.main-window span {
+    color: var(--pale_blue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bar-container {
+    display: flex;
+    width: 97%;
+    height: 20px;
+    margin: 0 auto;
+    background-color: hsla(229, 57%, 11%, 0.4);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.storage-bar {
+    display: flex;
+    width: 81.7%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--start_g), var(--end_g));
+    margin: auto 2px;
+    border-radius: 8px;
+    padding: 2px;
+    justify-content: end;
+}
+
+.circle {
+    display: flex;
+    height: 100%;
+    width: 10px;
+    background-color: var(--pale_blue);
+    border-radius: 5px;
+}
+
+.limits-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+}
+
+.left-window {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 60%;
+    background-color: #fff;
+    padding: 10px 20px;
+    bottom: -50px;
+    left: 20%;
+}
+
+.left-window h1 {
+    display: flex;
+    color: var(--very_dark_blue);
+    font-size: 50px;
+    margin: 0;
+}
+
+.left-window p {
+    width: auto;
+    color: var(--grayish_blue);
+    margin: 0;
+    margin-left: 10px;
+    font-weight: 800;
+}
+
+.corner {
+    display: none;
+}
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+
+@media only screen and (min-width:1000px){
+
+    body picture {
+        height: 50%;
+        bottom: 0;
+    }
+
+    body picture img {
+        width: 100%;
+    }
+
+    main {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        margin: auto;
+    }
+
+    main article {
+        width: auto;
+        height: auto;
+        max-width: none;
+        margin: auto 10px;
+    }
+
+    /* First Window */
+    /* First Window */
+
+    .logo-window {
+        width: 300px;
+        border-top-right-radius: 90px;
+    }
+
+    /* Second Window  */
+    /* Second Window  */
+
+    .main-window {
+        width: 500px;
+        margin-top: auto;
+        margin-bottom: 0;
+        padding: 30px 30px 20px 30px;
+    }
+
+    .main-window p {
+        margin: 0 0 15px 0;
+        font-size: 13px;
+    }
+
+    .bar-container {
+        width: 100%;
+    }
+
+    .limits-container {
+        margin: 10px 0 ;
+    }
+
+    .left-window {
+        width: auto;
+        top: -30px;
+        bottom: auto;
+        left: auto;
+        right: 20px;
+    }
+
+    .left-window h1 {
+        font-size: 35px;
+    }
+
+    .left-window p {
+        width: auto;
+        color: var(--grayish_blue);
+        margin: 0;
+        margin-left: 10px;
+        font-weight: 800;
+    }
+
+    .corner {
+        position: absolute;
+        display: flex;
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid transparent;
+        border-right: 20px solid #fff;
+        border-top: 20px solid #fff;
+        bottom: -20px;
+        right: 0;
+    }
+}
